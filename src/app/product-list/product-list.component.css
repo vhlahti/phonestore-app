@@ -1,0 +1,12 @@
+.main-container {
+    margin: 2rem 10rem 2rem 10rem;
+}
+#mainImage {
+    height: 300px;
+    background-image: url(../../assets/images/iso-iphone-xs.jpg);
+    background-size: cover;
+    background-position-y: -6rem;
+}
+figure {
+    margin: 0 0 1rem 0;
+}
