@@ -12,7 +12,7 @@ figure {
 }
 .productListTitle {
     color: #A5292A;
-    margin: 1.5rem 0 1rem 2rem;
+    margin: 1.5rem 0 1rem 1rem;
 }
 .productList {
     display: flex;
@@ -29,7 +29,12 @@ figure {
     justify-content: flex-end;
     align-self: self-start;
 }
-
+.buyButton {
+    background-color: #0EA0B7;
+    color: white;
+    /* align-self: self-start; */
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
 .productDescription {
     overflow: hidden;
     height: 100px;
@@ -46,6 +51,26 @@ figure {
 
 .showMore {
     font-style: italic;
-    margin-top: 0.2rem;
-    flex-grow: 1;
+    margin: 0.2rem 0 0.2rem 0;
+}
+
+.icon-facebook, .icon-twitter, .icon-instagram {
+    padding: 0.2rem;
+}
+.icon-facebook {
+    color: #1977F2;
+}
+.icon-twitter {
+    color: #1C9BEF;
+}
+.icon-instagram {
+    color: #F402B8;
+}
+.disabled-link {
+    pointer-events: none;
+    opacity: 0.5;
+    text-decoration: none;
+  }
+nav {
+    
 }

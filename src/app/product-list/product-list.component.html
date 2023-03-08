@@ -12,7 +12,7 @@
 
 <section class="productList">
 
-<div *ngFor="let product of products" class="card" style="width: 18rem;">
+<div *ngFor="let product of products" class="card" style="width: 20rem;">
     <img src="{{ 'assets/' + product.imageUrl }}" class="card-img-top" alt="Product image">
     <div class="card-body">
       <h5 class="card-title">{{ product.name }}</h5>
@@ -20,7 +20,17 @@
       <p class="card-text productDescription" [class.show]="product.visible">Description: {{ product.description }}
       </p>
       <span class="showMore" (click)="product.visible = !product.visible">...{{ product.visible ? 'less' : 'more'}}</span>
-      <a href="#" class="btn notifyButton">Notify me</a>
+
+      <nav>
+      <a href="#" [ngClass]="{'disabled-link': product.stock === false}"><button class="btn buyButton" [disabled]="product.stock === false">Buy now</button></a>
+      <a href="#"><fa-icon class="icon-facebook" [icon]="faSquareFacebook" size="xl"></fa-icon></a>
+      <a href="#"><fa-icon class="icon-twitter" [icon]="faSquareTwitter" size="xl"></fa-icon></a>
+      <a href="#"><fa-icon class="icon-instagram" [icon]="faSquareInstagram" size="xl"></fa-icon></a>
+      </nav>
+      
+      <a href="#" class="btn notifyButton" *ngIf="product.stock !== true">Notify me</a>
+      
+
     </div>
 </div>
 
