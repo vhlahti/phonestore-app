@@ -8,13 +8,22 @@
 
 <!-- phone cards -->
 
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+<h3 class="productListTitle">Phone models</h3>
+
+<section class="productList">
+
+<div *ngFor="let product of products" class="card" style="width: 18rem;">
+    <img src="{{ 'assets/' + product.imageUrl }}" class="card-img-top" alt="Product image">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text productPrice">${{ product.price.toFixed(2) }}</p>
+      <p class="card-text productDescription" [class.show]="product.visible">Description: {{ product.description }}
+      </p>
+      <span class="showMore" (click)="product.visible = !product.visible">...{{ product.visible ? 'less' : 'more'}}</span>
+      <a href="#" class="btn notifyButton">Notify me</a>
     </div>
-  </div>
+</div>
+
+</section>
 
 </section>

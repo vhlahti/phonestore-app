@@ -1,5 +1,5 @@
 .main-container {
-    margin: 2rem 10rem 2rem 10rem;
+    margin: 6rem 10rem 2rem 10rem;
 }
 #mainImage {
     height: 300px;
@@ -9,4 +9,43 @@
 }
 figure {
     margin: 0 0 1rem 0;
+}
+.productListTitle {
+    color: #A5292A;
+    margin: 1.5rem 0 1rem 2rem;
+}
+.productList {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.card img {
+    padding: 1rem;
+}
+.notifyButton {
+    background-color: #A5292A;
+    color: #F4DBAF;
+    margin: 2rem 0 0 0;
+    justify-content: flex-end;
+    align-self: self-start;
+}
+
+.productDescription {
+    overflow: hidden;
+    height: 100px;
+    margin: 0;
+}
+.show {
+    overflow: visible;
+    height: auto;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.showMore {
+    font-style: italic;
+    margin-top: 0.2rem;
+    flex-grow: 1;
 }

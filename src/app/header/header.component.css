@@ -5,6 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
 }
 h4 {
     margin: 0;
@@ -12,7 +15,7 @@ h4 {
 }
 .icon-mobile {
     color: #F4DBAF;
-    margin: 0 1rem 0 1rem;
+    margin: 0 0.5rem 0 1rem;
 }
 .icon-cart {
     color: #A5292A;
