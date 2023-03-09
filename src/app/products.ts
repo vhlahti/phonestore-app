@@ -13,7 +13,7 @@ export const products = [
       description: "Samsung's flagship for 2019, the Galaxy S10, matches its powerful hardware with the fresh OneUI interface. This thin and light phone is powered by the powerful Snapdragon 855/Exynos 9820 chips and has heaps of memory for your multitasking needs - a whopping 8GB, accompanied by 128 or 512GB versions. Design-wise, the Galaxy S10 sets itself apart from the previous generation with its offset punch-hole 10MP selfie camera, which is capable of capturing stabilized 4K footage. The camera is the only thing interrupting the gorgeous 6.1-inch OLED display. The cameras at the back are three - the regular 12MP is joined by a 12MP telephoto and a 16MP wide-angle one, a first for the Galaxy S series.",
       imageUrl: "images/pieni-samsung.png",
       visible: false,
-      stock: false
+      stock: true
     },
     {
       name: "Apple iPhone 7 256GB Gold",

@@ -23,9 +23,11 @@
 
       <article>
       <button (click)="addToCart(product)" class="btn addToCartButton" [disabled]="product.stock === false">Add to cart</button>
+
       <fa-icon class="icon-facebook" [icon]="faSquareFacebook" size="xl"></fa-icon>
       <fa-icon class="icon-twitter" [icon]="faSquareTwitter" size="xl"></fa-icon>
       <fa-icon class="icon-instagram" [icon]="faSquareInstagram" size="xl"></fa-icon>
+      <fa-icon class="icon-share" [icon]="faShareNodes" size="xl"></fa-icon>
       </article>
       
       <div class="OOS" *ngIf="product.stock !== true">

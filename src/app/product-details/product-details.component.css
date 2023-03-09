@@ -1,3 +1,28 @@
 .container {
-    margin: 6rem 0 2rem 2rem;
+    margin: 5.5rem 10rem 1.5rem 10rem;
+}
+.detailsTitle {
+    margin-bottom: 1rem;
+}
+.card-img-top {
+    max-width: 50%;
+    height: auto;
+    padding: 2rem 1rem 0 1rem;
+    align-self: center;
+  }
+.card-title, .card-price, .card-text {
+    margin: 1rem;
+}
+.buttons {
+    padding: 1rem 0 0.5rem 0;
+}
+
+.addToCartButton {
+    background-color: #0EA0B7;
+    color: white;
+    margin: 0 0 0 1rem;
+}
+.stockFalse {
+    color: red;
+    margin: 0 1rem 0 1rem;
 }

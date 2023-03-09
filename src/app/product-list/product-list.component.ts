@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { products } from '../products';
 import { faSquareFacebook, faSquareTwitter, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { CartService } from '../cart.service';
+import { faShareNodes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-product-list',
@@ -13,6 +14,7 @@ export class ProductListComponent implements OnInit{
   faSquareFacebook = faSquareFacebook;
   faSquareTwitter = faSquareTwitter;
   faSquareInstagram = faSquareInstagram;
+  faShareNodes = faShareNodes;
   
   products = products;
   show = false;
@@ -53,4 +55,6 @@ export class ProductListComponent implements OnInit{
         }
       }, 3000);
   }
+
+
 }

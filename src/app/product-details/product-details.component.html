@@ -1,14 +1,24 @@
 <section class="container">
 
-<h1>Product details</h1>
+<h3 class="detailsTitle">Product details</h3>
 
-<div class="card p-3 mb-5" *ngIf="product">
+<div class="card mb-3" *ngIf="product">
     <img src="{{ 'assets/' + product.imageUrl }}" class="card-img-top" alt="Product image">
-    <h3>{{ product.name }}</h3>
-    <h4>{{ product.price | currency }}</h4>
-    <p>{{ product.description }}</p>
-</div>
+    <div class="card-body">
+      <h3 class="card-title">{{ product.name }}</h3>
+      <h4 class="card-price">{{ product.price | currency }}</h4>
+      <p class="card-text">{{ product.description }}</p>
+    </div>
+  </div>
+
+<article class="buttons">
 
 <a routerLink="/home"><button type="button" class="btn btn-outline-secondary">Back</button></a>
+
+<button (click)="addToCart(product)" class="btn addToCartButton" [disabled]="product.stock === false">Add to cart</button>
+
+<span *ngIf="product.stock === false" class="stockFalse">Out of stock!</span>
+
+</article>
 
 </section>
