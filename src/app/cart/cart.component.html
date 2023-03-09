@@ -1,0 +1,13 @@
+<section class="container">
+
+<h3>Cart</h3>
+
+<div class="cart-item bg-light p-3" *ngFor="let item of items">
+    <h6>My Order</h6>
+    <span>{{ item.name }}</span>
+    <span class="ml-5"><strong>{{ item.price | currency }}</strong></span>
+  </div>
+
+<a routerLink="/home"><button type="button" class="btn btn-outline-secondary">Back</button></a>
+
+</section>

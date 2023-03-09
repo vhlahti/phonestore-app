@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { faMobileScreen } from '@fortawesome/free-solid-svg-icons';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faMobileScreen, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',

@@ -1,0 +1,14 @@
+<section class="container">
+
+<h1>Product details</h1>
+
+<div class="card p-3 mb-5" *ngIf="product">
+    <img [src]="product.imgUrl" class="img-fluid p-5"/>
+    <h3>{{ product.name }}</h3>
+    <h4>{{ product.price | currency }}</h4>
+    <p>{{ product.description }}</p>
+</div>
+
+<a routerLink="/home"><button type="button" class="btn btn-outline-secondary">Back</button></a>
+
+</section>

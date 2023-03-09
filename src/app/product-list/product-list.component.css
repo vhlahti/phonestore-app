@@ -51,6 +51,7 @@ figure {
 
 .showMore {
     font-style: italic;
+    color: lightslategray;
     margin: 0.2rem 0 0.2rem 0;
 }
 
@@ -66,11 +67,11 @@ figure {
 .icon-instagram {
     color: #F402B8;
 }
-.disabled-link {
-    pointer-events: none;
-    opacity: 0.5;
-    text-decoration: none;
-  }
-nav {
-    
+.stockFalse {
+    color: red;
+    margin: 0.5rem 0 0.5rem 3rem;
+    align-self: flex-end;
+}
+.OOS {
+    display: flex;
 }
