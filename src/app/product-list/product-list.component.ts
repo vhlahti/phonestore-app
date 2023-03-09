@@ -18,6 +18,7 @@ export class ProductListComponent implements OnInit{
   show = false;
   items;
   product;
+  snackbarMessage: string = '';
 
   constructor(private cartService: CartService) {}
 
@@ -27,6 +28,12 @@ export class ProductListComponent implements OnInit{
 
   addToCart(product) {
     this.cartService.addToCart(product);
+    this.snackbarMessage = 'Product added to cart!';
+    this.openSnackbar();
+  }
+
+  notifyUser() {
+    this.snackbarMessage = 'You will be notified when the product is back in stock!';
     this.openSnackbar();
   }
 

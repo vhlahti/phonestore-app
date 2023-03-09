@@ -29,7 +29,7 @@
       </article>
       
       <div class="OOS" *ngIf="product.stock !== true">
-      <a href="#"><button class="btn notifyButton">Notify me</button></a>
+      <button (click)="notifyUser()" class="btn notifyButton">Notify me</button>
         <span class="stockFalse">Out of stock!</span>
       </div>
       
@@ -40,6 +40,6 @@
 
 <!-- snackbar -->
 
-<div id="snackbar">Product added to cart!</div>
+<div id="snackbar">{{ snackbarMessage }}</div>
 
 </section>
