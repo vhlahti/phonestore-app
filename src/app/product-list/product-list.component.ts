@@ -21,11 +21,29 @@ export class ProductListComponent implements OnInit{
 
   constructor(private cartService: CartService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
   addToCart(product) {
     this.cartService.addToCart(product);
+    this.openSnackbar();
   }
 
-
+  openSnackbar() {
+      // Get the snackbar DIV
+      const x = document.getElementById("snackbar");
+    
+      // Add the "show" class to DIV
+      if (x) {
+        x.className = "show";
+      }
+    
+      // After 3 seconds, remove the show class from DIV
+      setTimeout(() => {
+        if (x) {
+          x.className = x.className.replace("show", "");
+        }
+      }, 3000);
+  }
 }
