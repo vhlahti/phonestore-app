@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CartService {
   items = [];
-  cartItemCount: number = 0;
+  cartItemCount = 0;
 
   constructor(private http: HttpClient) { }
 
   addToCart(product) {
     this.items.push(product);
-    this.cartItemCount = +1;
+    this.cartItemCount++;
   }
 
   getItems() {
@@ -21,6 +21,7 @@ export class CartService {
 
   clearCart() {
     this.items = [];
+    this.cartItemCount = 0;
     return this.items;
   }
 

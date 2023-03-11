@@ -1,8 +1,8 @@
-<section class="container">
+<section class="shipping-container">
 
 <h4 class="shipping-title">Shipping Prices</h4>
 
-<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+<div class="shipping-item bg-light p-3" *ngFor="let shipping of shippingCosts | async">
   <span>{{ shipping.type }} </span>
   <span>{{ shipping.price | currency }}</span>
 </div>

@@ -1,7 +1,5 @@
 <section class="container">
 
-<h3 class="detailsTitle">Product details</h3>
-
 <div class="card mb-3" *ngIf="product">
     <img src="{{ 'assets/' + product.imageUrl }}" class="card-img-top" alt="Product image">
     <div class="card-body">
@@ -20,5 +18,9 @@
 <span *ngIf="product.stock === false" class="stockFalse">Out of stock!</span>
 
 </article>
+
+<!-- snackbar -->
+
+<div id="snackbar">{{ snackbarMessage }}</div>
 
 </section>

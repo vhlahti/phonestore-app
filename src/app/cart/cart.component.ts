@@ -12,7 +12,7 @@ export class CartComponent implements OnInit {
   items;
   snackbarMessage: string = '';
 
-  constructor(private cartService: CartService,
+  constructor(public cartService: CartService,
               private snackbarService: SnackbarService) {}
 
   ngOnInit(): void {
@@ -24,15 +24,27 @@ export class CartComponent implements OnInit {
   }
 
   purchaseItems() {
+    if (this.cartService.cartItemCount === 0) {
+      this.snackbarMessage = 'Nothing to purchase!';
+      this.snackbarService.openSnackbar();
+    }
+    else {
     this.snackbarMessage = 'Thank you for your purchase!';
     this.snackbarService.openSnackbar();
     this.clearItems();
+    }
   }
 
   clearItemsSnackbar() {
-    this.clearItems();
-    this.snackbarMessage = 'Cart is now empty!';
-    this.snackbarService.openSnackbar();
+    if (this.cartService.cartItemCount === 0) {
+      this.snackbarMessage = 'Nothing to clear!';
+      this.snackbarService.openSnackbar();
+    }
+    else {
+      this.clearItems();
+      this.snackbarMessage = 'Cart is now empty!';
+      this.snackbarService.openSnackbar();
+    }
   }
 
 }
