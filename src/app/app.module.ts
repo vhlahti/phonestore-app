@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from '@angular/material/button';
 import { ShippingComponent } from './shipping/shipping.component';
+import { SnackbarService } from './snackbar.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ShippingComponent } from './shipping/shipping.component';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [CartService],
+  providers: [CartService, SnackbarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

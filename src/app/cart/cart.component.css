@@ -1,9 +1,13 @@
-.container {
-    margin: 6.5rem 0 2rem 2rem;
+.cart-container {
+    margin: 6.5rem 2rem 2rem 2rem;
+    padding: 0;
 }
 .cart-title {
     margin: 0 0 2rem 0;
 }
+.shipping {
+    margin: 1.5rem 0 0 0;
+}
 button {
-    margin: 2rem 0 0.5rem 0;
+    margin: 2rem 1rem 0 0;
 }

@@ -1,10 +1,9 @@
-<section class="container">
+<section class="cart-container">
 
 <h4 class="cart-title">Cart</h4>
 
 <div class="cart-item bg-light p-3" *ngFor="let item of items">
-    <h6>My Order</h6>
-    <span>{{ item.name }}</span>
+    <span>{{ item.name }}</span><br>
     <span class="ml-5"><strong>{{ item.price | currency }}</strong></span>
 </div>
 
@@ -13,7 +12,11 @@
 </section>
 
 <a routerLink="/home"><button type="button" class="btn btn-outline-secondary">Back</button></a>
-<button type="button" class="btn btn-outline-secondary" (click)="clearItems()">Clear items</button>
-<button type="button" class="btn btn-outline-secondary">Purchase</button>
+<button type="button" class="btn btn-outline-secondary" (click)="clearItemsSnackbar()">Clear items</button>
+<button type="button" class="btn btn-outline-secondary" (click)="purchaseItems()">Purchase</button>
+
+<!-- snackbar -->
+
+<div id="snackbar">{{ snackbarMessage }}</div>
 
 </section>

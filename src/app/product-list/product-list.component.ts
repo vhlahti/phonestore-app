@@ -3,6 +3,7 @@ import { products } from '../products';
 import { faSquareFacebook, faSquareTwitter, faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { CartService } from '../cart.service';
 import { faShareNodes } from '@fortawesome/free-solid-svg-icons';
+import { SnackbarService } from '../snackbar.service';
 
 @Component({
   selector: 'app-product-list',
@@ -22,7 +23,8 @@ export class ProductListComponent implements OnInit{
   product;
   snackbarMessage: string = '';
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService,
+              private snackbarService: SnackbarService) {}
 
   ngOnInit(): void {
     
@@ -31,30 +33,11 @@ export class ProductListComponent implements OnInit{
   addToCart(product) {
     this.cartService.addToCart(product);
     this.snackbarMessage = 'Product added to cart!';
-    this.openSnackbar();
+    this.snackbarService.openSnackbar();
   }
 
   notifyUser() {
     this.snackbarMessage = 'You will be notified when the product is back in stock!';
-    this.openSnackbar();
+    this.snackbarService.openSnackbar();
   }
-
-  openSnackbar() {
-      // Get the snackbar DIV
-      const x = document.getElementById("snackbar");
-    
-      // Add the "show" class to DIV
-      if (x) {
-        x.className = "show";
-      }
-    
-      // After 3 seconds, remove the show class from DIV
-      setTimeout(() => {
-        if (x) {
-          x.className = x.className.replace("show", "");
-        }
-      }, 3000);
-  }
-
-
 }
