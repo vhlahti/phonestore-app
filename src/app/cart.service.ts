@@ -8,6 +8,8 @@ export class CartService {
   items = [];
   cartItemCount: number = 0;
 
+  constructor(private http: HttpClient) { }
+
   addToCart(product) {
     this.items.push(product);
     this.cartItemCount = +1;
@@ -22,5 +24,7 @@ export class CartService {
     return this.items;
   }
 
-  constructor(private http: HttpClient) { }
+  getShippingPrices() {
+    return this.http.get('assets/documents/shipping.json')
+  }
 }

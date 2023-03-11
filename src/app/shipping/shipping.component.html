@@ -1,0 +1,12 @@
+<section class="container">
+
+<h4 class="shipping-title">Shipping Prices</h4>
+
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <span>{{ shipping.type }} </span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
+
+<a routerLink="/cart"><button type="button" class="btn btn-outline-secondary">Back</button></a>
+
+</section>

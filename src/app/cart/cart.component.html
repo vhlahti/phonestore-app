@@ -1,12 +1,16 @@
 <section class="container">
 
-<h3 class="cart-title">Cart</h3>
+<h4 class="cart-title">Cart</h4>
 
 <div class="cart-item bg-light p-3" *ngFor="let item of items">
     <h6>My Order</h6>
     <span>{{ item.name }}</span>
     <span class="ml-5"><strong>{{ item.price | currency }}</strong></span>
-  </div>
+</div>
+
+<section class="shipping">
+<a routerLink="/shipping">Show shipping prices</a>
+</section>
 
 <a routerLink="/home"><button type="button" class="btn btn-outline-secondary">Back</button></a>
 <button type="button" class="btn btn-outline-secondary" (click)="clearItems()">Clear items</button>
