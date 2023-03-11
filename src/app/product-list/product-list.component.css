@@ -1,5 +1,5 @@
 .main-container {
-    margin: 6rem 10rem 2rem 10rem;
+    margin: 6rem 10rem 1rem 10rem;
 }
 #mainImage {
     height: 300px;
@@ -23,16 +23,15 @@ figure {
     padding: 1rem;
 }
 .notifyButton {
-    background-color: #A5292A;
-    color: #F4DBAF;
     margin: 2rem 0 0 0;
     justify-content: flex-end;
     align-self: self-start;
 }
 .addToCartButton {
-    background-color: #0EA0B7;
-    color: white;
     margin: 0.5rem 0.5rem 0.5rem 0;
+}
+.productPrice {
+    font-weight: bold;
 }
 .productDescription {
     overflow: hidden;
@@ -47,19 +46,14 @@ figure {
     display: flex;
     flex-direction: column;
 }
-a:link {
-    text-decoration: none;
-}
 .card-title {
     color: #A5292A;
 }
-
 .showMore {
     font-style: italic;
     color: lightslategray;
     margin: 0.2rem 0 0.2rem 0;
 }
-
 .icon-facebook, .icon-twitter, .icon-instagram {
     padding: 0.2rem;
 }
@@ -76,7 +70,6 @@ a:link {
     color: black;
     padding: 0.2rem;
 }
-
 .stockFalse {
     color: red;
     margin: 0.5rem 0 0.5rem 3rem;

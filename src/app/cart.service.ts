@@ -7,12 +7,14 @@ import { HttpClient } from '@angular/common/http';
 export class CartService {
   items = [];
   cartItemCount = 0;
+  cartTotalSum = 0;
 
   constructor(private http: HttpClient) { }
 
   addToCart(product) {
     this.items.push(product);
     this.cartItemCount++;
+    this.cartTotalSum += product.price;
   }
 
   getItems() {
@@ -22,6 +24,7 @@ export class CartService {
   clearCart() {
     this.items = [];
     this.cartItemCount = 0;
+    this.cartTotalSum = 0;
     return this.items;
   }
 

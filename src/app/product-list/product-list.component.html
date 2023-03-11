@@ -8,30 +8,30 @@
 
 <!-- phone cards -->
 
-<h3 class="productListTitle">Phone models</h3>
+<h2 class="productListTitle">Phone models</h2>
 
 <section class="productList">
 
 <div *ngFor="let product of products; index as productId" class="card" style="width: 20rem;">
     <img src="{{ 'assets/' + product.imageUrl }}" class="card-img-top" alt="Product image">
     <div class="card-body">
-      <a [routerLink]="['/products', productId]"><h5 class="card-title">{{ product.name }}</h5></a>
+      <a [routerLink]="['/products', productId]"><h3 class="card-title">{{ product.name }}</h3></a>
       <p class="card-text productPrice">{{ product.price | currency }}</p>
       <p class="card-text productDescription" [class.show]="product.visible">Description: {{ product.description }}
       </p>
       <span class="showMore" (click)="product.visible = !product.visible">...{{ product.visible ? 'less' : 'more'}}</span>
 
       <article>
-      <button (click)="addToCart(product)" class="btn addToCartButton" [disabled]="product.stock === false">Add to cart</button>
+      <button mat-raised-button color="primary" (click)="addToCart(product)" class="addToCartButton" [disabled]="product.stock === false">Add to cart</button>
 
       <fa-icon class="icon-facebook" [icon]="faSquareFacebook" size="xl"></fa-icon>
       <fa-icon class="icon-twitter" [icon]="faSquareTwitter" size="xl"></fa-icon>
       <fa-icon class="icon-instagram" [icon]="faSquareInstagram" size="xl"></fa-icon>
-      <fa-icon class="icon-share" [icon]="faShareNodes" size="xl"></fa-icon>
+      <fa-icon class="icon-share" [icon]="faShareNodes" size="lg"></fa-icon>
       </article>
       
       <div class="OOS" *ngIf="product.stock !== true">
-      <button (click)="notifyUser()" class="btn notifyButton">Notify me</button>
+      <button mat-raised-button color="warn" (click)="notifyUser()" class="notifyButton">Notify me</button>
         <span class="stockFalse">Out of stock!</span>
       </div>
       

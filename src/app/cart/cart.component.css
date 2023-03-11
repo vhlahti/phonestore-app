@@ -1,5 +1,5 @@
 .cart-container {
-    margin: 6.5rem 2rem 2rem 2rem;
+    margin: 6.5rem 2rem 1.5rem 2rem;
     padding: 0;
 }
 .cart-title {
@@ -10,4 +10,7 @@
 }
 button {
     margin: 2rem 1rem 0 0;
+}
+.empty-cart {
+    margin: 0;
 }

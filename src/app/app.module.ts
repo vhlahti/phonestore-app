@@ -18,6 +18,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatButtonModule } from '@angular/material/button';
 import { ShippingComponent } from './shipping/shipping.component';
 import { SnackbarService } from './snackbar.service';
+import { MatBadgeModule} from '@angular/material/badge'; 
+import { MatIconModule} from '@angular/material/icon'; 
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { SnackbarService } from './snackbar.service';
     MatButtonModule,
     CommonModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatBadgeModule,
+    MatIconModule
   ],
   providers: [CartService, SnackbarService],
   bootstrap: [AppComponent]

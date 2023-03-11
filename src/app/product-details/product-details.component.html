@@ -3,7 +3,7 @@
 <div class="card mb-3" *ngIf="product">
     <img src="{{ 'assets/' + product.imageUrl }}" class="card-img-top" alt="Product image">
     <div class="card-body">
-      <h3 class="card-title">{{ product.name }}</h3>
+      <h2 class="card-title">{{ product.name }}</h2>
       <h4 class="card-price">{{ product.price | currency }}</h4>
       <p class="card-text">{{ product.description }}</p>
     </div>
@@ -11,9 +11,9 @@
 
 <article class="buttons">
 
-<a routerLink="/home"><button type="button" class="btn btn-outline-secondary">Back</button></a>
+<a routerLink="/home"><button mat-raised-button>Back</button></a>
 
-<button (click)="addToCart(product)" class="btn addToCartButton" [disabled]="product.stock === false">Add to cart</button>
+<button mat-raised-button color="primary" (click)="addToCart(product)" class="addToCartButton" [disabled]="product.stock === false">Add to cart</button>
 
 <span *ngIf="product.stock === false" class="stockFalse">Out of stock!</span>
 
