@@ -46,6 +46,7 @@ figure {
     height: auto;
 }
 .showMore {
+    cursor: pointer;
     font-style: italic;
     color: lightslategray;
     margin: 0.2rem 0 0.2rem 0;
