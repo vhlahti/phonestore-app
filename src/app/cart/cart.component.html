@@ -6,12 +6,13 @@
     <p class="empty-cart">Your cart is empty.</p>
 </div>
 
-<div class="cart-item bg-light p-3" *ngIf="cartService.cartItemCount !== 0">
+<div class="cart-top cart-item bg-light" *ngIf="cartService.cartItemCount !== 0">
     <p>Number of items in cart: <span style="font-weight: bold;">{{ cartService.cartItemCount }}</span></p>
     <p>Total sum of items in cart: <span style="font-weight: bold;">{{ cartService.cartTotalSum | currency }}</span></p>
+    <hr>
 </div>
 
-<div class="cart-item bg-light p-3" *ngFor="let item of items">
+<div class="cart-bottom cart-item bg-light" *ngFor="let item of items">
     <span>{{ item.name }}</span><br>
     <span style="font-weight: bold;" class="ml-5">{{ item.price | currency }}</span>
 </div>

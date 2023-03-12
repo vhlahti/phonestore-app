@@ -3,10 +3,16 @@
     padding: 0;
 }
 .cart-title {
-    margin: 0 0 2rem 0;
+    margin: 0 0 1.5rem 0;
+}
+.cart-top {
+    padding: 1.6rem 1.6rem 0.5rem 1.6rem;
+}
+.cart-bottom {
+    padding: 0.5rem 1.6rem 1.6rem 1.6rem;
 }
 .shipping {
-    margin: 1.5rem 0 0 0;
+    margin: 2rem 0 0 0;
 }
 button {
     margin: 2rem 1rem 0 0;

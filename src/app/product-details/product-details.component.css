@@ -1,12 +1,15 @@
 .container {
     margin: 6.5rem 10rem 1rem 10rem;
 }
+.product-title {
+    margin: 0 0 1rem 0;
+}
 .card-img-top {
     max-width: 50%;
     height: auto;
     padding: 2rem 1rem 0 1rem;
     align-self: center;
-  }
+}
 .card-title, .card-price, .card-text {
     margin: 1rem;
 }
@@ -19,4 +22,13 @@
 .stockFalse {
     color: red;
     margin: 0 1rem 0 1rem;
+}
+
+@media only screen and (max-width: 425px) {
+    .container {
+        margin: 6.5rem 0 1rem 0;
+    }
+    .card-img-top {
+        max-width: 75%;
+    }
 }

@@ -1,4 +1,4 @@
-.main-container {
+.container {
     margin: 6rem 10rem 1rem 10rem;
 }
 #mainImage {
@@ -16,19 +16,22 @@ figure {
 }
 .productList {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 1rem;
+}
+.card {
+    margin: 0 0.5rem 0 0.5rem;
 }
 .card img {
     padding: 1rem;
 }
-.notifyButton {
-    margin: 2rem 0 0 0;
-    justify-content: flex-end;
-    align-self: self-start;
+.card-body {
+    display: flex;
+    flex-direction: column;
 }
-.addToCartButton {
-    margin: 0.5rem 0.5rem 0.5rem 0;
+.card-title {
+    color: #A5292A;
 }
 .productPrice {
     font-weight: bold;
@@ -42,17 +45,13 @@ figure {
     overflow: visible;
     height: auto;
 }
-.card-body {
-    display: flex;
-    flex-direction: column;
-}
-.card-title {
-    color: #A5292A;
-}
 .showMore {
     font-style: italic;
     color: lightslategray;
     margin: 0.2rem 0 0.2rem 0;
+}
+.addToCartButton {
+    margin: 0.5rem 0.5rem 0.5rem 0;
 }
 .icon-facebook, .icon-twitter, .icon-instagram {
     padding: 0.2rem;
@@ -70,11 +69,35 @@ figure {
     color: black;
     padding: 0.2rem;
 }
+.OOS {
+    display: flex;
+}
+.notifyButton {
+    margin: 2rem 0 0 0;
+    justify-content: flex-end;
+    align-self: self-start;
+}
 .stockFalse {
     color: red;
     margin: 0.5rem 0 0.5rem 3rem;
     align-self: flex-end;
 }
-.OOS {
-    display: flex;
+
+@media only screen and (max-width: 425px) {
+    .container {
+        margin: 6rem 0 0.5rem 0;
+    }
+    #mainImage {
+        height: 200px;
+        background-position-y: 0;
+    }
+    .card {
+        margin-bottom: 0.5rem;
+    }
+    .productListTitle {
+        text-align: center;
+    }
+    .productList {
+        margin: 0;
+    }
 }

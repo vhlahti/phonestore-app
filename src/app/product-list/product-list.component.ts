@@ -37,7 +37,7 @@ export class ProductListComponent implements OnInit{
   }
 
   notifyUser() {
-    this.snackbarMessage = 'You will be notified when the product is back in stock!';
+    this.snackbarMessage = 'Notification request registered!';
     this.snackbarService.openSnackbar();
   }
 }
