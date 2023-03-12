@@ -1,5 +1,5 @@
 .container {
-    margin: 6rem 10rem 1rem 10rem;
+    margin: 6rem auto 1rem auto;
 }
 #mainImage {
     height: 300px;
@@ -85,7 +85,7 @@ figure {
 
 @media only screen and (max-width: 425px) {
     .container {
-        margin: 6rem 0 0.5rem 0;
+        margin: 6rem auto 0.5rem auto;
     }
     #mainImage {
         height: 200px;
